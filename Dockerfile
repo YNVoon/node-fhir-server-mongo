@@ -16,10 +16,10 @@ WORKDIR /srv/src
 
 # Copy our package.json & install our dependencies
 COPY package.json /srv/src/package.json
-RUN yarn install
+RUN npm install
 
 # Copy the remaining application code
 COPY . /srv/src
 
 # Start the app
-CMD yarn start
+CMD npm run start
